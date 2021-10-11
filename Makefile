@@ -15,6 +15,7 @@ list:
 	@echo "  build            > Generate the Angular client dist application (html, css, js)"
 	@echo "  shell            > Shell into client container"
 	@echo "  tests            > Starts the unit tests"
+	@echo "  tests-wc         > Starts the unit tests and generate code coverage"
 	@echo ""
 
 rebuild:
@@ -47,4 +48,7 @@ shell:
 	@docker-compose exec client bash
 
 tests:
+	@docker-compose exec client npx jest
+
+tests-wc:
 	@docker-compose exec client npx jest --coverage --collectCoverageFrom='src/**/*.ts'
