@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    client:
+        build:
+            context: ./client
+            dockerfile: ./Dockerfile.dev
+        ports:
+            - 4200:4200
+        working_dir: /project
+        volumes:
+            - ./client:/project
+        command: ng serve --host=0.0.0.0 --disable-host-check --port 4200
