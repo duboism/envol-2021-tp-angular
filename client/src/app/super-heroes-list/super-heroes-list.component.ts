@@ -8,16 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SuperHeroesListComponent implements OnInit {
 
   @Input() superheroes: string[] = [];
-  newHero: string = "Black Linux !";
-  newHeroAdded: boolean = false;
-
-  // Ajoute newHero si il n'est pas dans la liste et désactive le bouton
-  addNewHero(): void {
-    if (! this.newHeroAdded ) {
-      this.superheroes.push(this.newHero);
-      this.newHeroAdded = true;
-    }
-  }
 
   constructor() { }
 

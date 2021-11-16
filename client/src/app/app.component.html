@@ -1,5 +1,8 @@
 <!-- Titre -->
-<h1>Bienvenue dans le TP Angular ENVOL 2021</h1>
+<h1>{{ title }}</h1>
 
 <!-- Composant SuperHeroesListComponent -->
-<app-super-heroes-list [superheroes]="['toto', 'tutu', 'Hulk', 'Thor']"></app-super-heroes-list>
+<app-super-heroes-list [superheroes]="superheroes"></app-super-heroes-list>
+
+<!-- Bouton pour ajouter un héro (l'attribut disabled est lié à la valeur newHeroAdded) -->
+<button type="button" [disabled]="newHeroAdded" (click)="addNewHero()">Ajouter un super-héro</button>
