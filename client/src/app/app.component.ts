@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,6 +11,12 @@ export class AppComponent {
   superheroes: string[] = ['Hulk', 'Spider-Man', 'Thor', 'Iron Man'];
   newHero: string = "Black Linux !";
   newHeroAdded: boolean = false;
+  // Service HttpClient
+  private httpClient: HttpClient;
+
+  constructor(httpClient: HttpClient) {
+    this.httpClient = httpClient;
+  }
 
   // Ajoute newHero si il n'est pas dans la liste et désactive le bouton
   addNewHero(): void {
