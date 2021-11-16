@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title: string = 'client';
+    superheroes: string[] = [
+        'Hulk', 'Spider-Man', 'Thor', 'Iron Man'
+    ];
 }
