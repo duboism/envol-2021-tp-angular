@@ -1,0 +1,13 @@
+<!-- Composant SuperHeroesListComponent
+   - le paramètre d'entrée superheroes est liée à la variable éponyme
+   - le paramètre d'entée newHeroAdded est lié à à la variable éponyme
+   - le paramètre de sortir addNewHero appelle la méthode éponyme
+-->
+<app-super-heroes-list
+  [superheroes]="superheroes"
+  [newHeroAdded]="newHeroAdded"
+  [superheroesIsLoading]="superheroesIsLoading"
+  [superheroesIsLoaded]="superheroesIsLoaded"
+  (addNewHero)="addNewHero()"
+>
+</app-super-heroes-list>

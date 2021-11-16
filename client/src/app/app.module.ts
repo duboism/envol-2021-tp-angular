@@ -7,11 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SuperHeroesListComponent } from './super-heroes-list/super-heroes-list.component';
+import { HomeComponent } from './home/home.component';
+import { SuperHeroesComponent } from './super-heroes/super-heroes.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        SuperHeroesListComponent
+        SuperHeroesListComponent,
+        HomeComponent,
+        SuperHeroesComponent,
     ],
     imports: [
         BrowserModule,
