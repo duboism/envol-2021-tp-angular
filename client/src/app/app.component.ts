@@ -10,12 +10,14 @@ export class AppComponent {
     superheroes: string[] = [
         'Hulk', 'Spider-Man', 'Thor', 'Iron Man'
     ];
-    newHero: string = "Black Linux !"
+    newHero: string = "Black Linux !";
+    newHeroAdded: boolean = false;
 
-    // Ajoute newHero si il n'est pas dans la liste
+    // Ajoute newHero si il n'est pas dans la liste et désactive le bouton
     addNewHero(): void {
-        if (! this.superheroes.includes(this.newHero) ) {
+        if (! this.newHeroAdded ) {
             this.superheroes.push(this.newHero);
+            this.newHeroAdded = true;
         }
     }
 }
