@@ -1,8 +1,14 @@
 <!-- Titre -->
 <h1>{{ title }}</h1>
 
-<!-- Composant SuperHeroesListComponent -->
-<app-super-heroes-list [superheroes]="superheroes"></app-super-heroes-list>
-
-<!-- Bouton pour ajouter un héro (l'attribut disabled est lié à la valeur newHeroAdded) -->
-<button type="button" [disabled]="newHeroAdded" (click)="addNewHero()">Ajouter un super-héro</button>
+<!-- Composant SuperHeroesListComponent
+   - le paramètre d'entrée superheroes est liée à la variable éponyme
+   - le paramètre d'entée newHeroAdded est lié à à la variable éponyme
+   - le paramètre de sortir addNewHero appelle la méthode éponyme
+-->
+<app-super-heroes-list
+  [superheroes]="superheroes"
+  [newHeroAdded]="newHeroAdded"
+  (addNewHero)="addNewHero()"
+>
+</app-super-heroes-list>
