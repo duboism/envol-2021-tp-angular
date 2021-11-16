@@ -1,2 +1,11 @@
 <h1>Mon premier composant !</h1>
 <p>super-heroes-list works!</p>
+
+<!-- Affichage d'une liste de valeurs avec mise en valeur de Hulk -->
+Voici une liste de super-heros:
+<ul>
+  <li *ngFor="let superhero of superheroes" [class.isImportant]="superhero === 'Thor'"><span *ngIf="superhero === 'Hulk'" class="fas fa-check"></span>{{ superhero }}</li>
+</ul>
+
+<!-- Bouton pour ajouter un héro (l'attribut disabled est lié à la valeur newHeroAdded) -->
+<button type="button" [disabled]="newHeroAdded" (click)="addNewHero()">Ajouter un super-héro</button>
