@@ -7,3 +7,5 @@ Voici une liste de super-heros:
 <li *ngFor="let superhero of superheroes"><span *ngIf="superhero === 'Hulk'" class="fas fa-check"></span>{{ superhero }}</li>
 </ul>
 
+<!-- Bouton pour ajouter un héro -->
+<button type="button" (click)="addNewHero()">Ajouter un super-héro</button>
