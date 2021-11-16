@@ -1,9 +1,9 @@
 <!-- Titre -->
 <h1>Bienvenue dans le TP Angular ENVOL 2021</h1>
 
-<!-- Affichage d'une liste de valeurs -->
+<!-- Affichage d'une liste de valeurs avec mise en valeur de Hulk -->
 Voici une liste de super-heros:
 <ul>
-<li *ngFor="let superhero of superheroes">{{ superhero }}</li>
+<li *ngFor="let superhero of superheroes"><span *ngIf="superhero === 'Hulk'" class="fas fa-check"></span>{{ superhero }}</li>
 </ul>
 
