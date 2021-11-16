@@ -9,6 +9,8 @@ export class SuperHeroesListComponent implements OnInit {
 
   @Input() superheroes: string[] = [];
   @Input() newHeroAdded: boolean = false;
+  @Input() superheroesIsLoading: boolean = false;
+  @Input() superheroesIsLoaded: boolean = false;
   @Output() addNewHero: EventEmitter<{}> = new EventEmitter();
 
   constructor() { }

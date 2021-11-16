@@ -1,11 +1,21 @@
 <h1>Mon premier composant !</h1>
 <p>super-heroes-list works!</p>
 
-<!-- Affichage d'une liste de valeurs avec mise en valeur de Hulk -->
-Voici une liste de super-heros:
-<ul>
-  <li *ngFor="let superhero of superheroes" [class.isImportant]="superhero === 'Thor'"><span *ngIf="superhero === 'Hulk'" class="fas fa-check"></span>{{ superhero }}</li>
-</ul>
+<!-- Affiche une roue d'attente durant le chargement des donnés -->
+<div *ngIf="superheroesIsLoading">
+  <span class="fas fa-circle-notch fa-spin fa-3x"></span>
+  <span class="sr-only">Loading...</span>
+</div>
+<!-- Affiche la liste de valeurs quand elle est chargée avec mise en valeur de Hulk et de Thor -->
+<div *ngIf="superheroesIsLoaded">
+  Voici une liste de super-heros:
+  <ul>
+    <li *ngFor="let superhero of superheroes" [class.isImportant]="superhero === 'Thor'"><span *ngIf="superhero === 'Hulk'" class="fas fa-check"></span>{{ superhero }}</li>
+  </ul>
 
-<!-- Bouton pour ajouter un héro (l'attribut disabled est lié à la valeur newHeroAdded) -->
-<button type="button" [disabled]="newHeroAdded" (click)="addNewHero.emit()">Ajouter un super-héro</button>
+  <!-- Bouton pour ajouter un héro:
+     - l'attribut disabled est lié à la valeur newHeroAdded
+     - le clic délenche addNewHero
+  -->
+  <button type="button" [disabled]="newHeroAdded" (click)="addNewHero.emit()">Ajouter un super-héro</button>
+</div>
